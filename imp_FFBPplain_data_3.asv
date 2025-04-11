@@ -1,0 +1,88 @@
+load dAtA.mat
+%cc=1:575;
+%cc=576:1151;
+%cc=1152:1709;
+%cc=1710:2134;
+%cc=2135:2943
+%cc=2944:3384
+%cc=3385:4167
+%cc=4168:4873;
+%ALL DATA WITHOUT STAGES
+cc=1:2134;
+cc=2135:4873;
+%load Net_1_plain_10.mat
+%load TR_plain_1_10.mat
+load Net_2_plain_5.mat
+load TR_plain_2_5.mat
+
+
+
+%k-fold vaidation 
+n = length(cc)
+c = cvpartition(n,'KFold',10)
+
+
+%store CNN
+NETT=cell(10,1);
+
+%perfrmance metrics 
+
+accurcy=[];
+mse=[];
+mae=[];
+rmse=[];
+
+
+DATA=dAtA(cc,1:15);
+
+for po=1:14
+    DATA(:,po)= DATA(:,po)/max(abs(DATA(:,po)))
+end
+for ii=1:10
+j1=training(c,ii);
+jj1=test(c,ii);
+
+
+
+% 
+% net = configure(net, DATA(j1,1:14)',DATA(j1,15:20)' );
+% 
+% % train net
+% net.divideFcn='divideint';
+% net.divideParam.trainRatio = 0.4; % training set [%]
+% net.divideParam.valRatio = 0.5; % validation set [%]
+% net.divideParam.testRatio = 0.1; % test set [%]
+
+% train a neural network
+
+% net.performFcn='mse';
+% 
+% 
+% net.trainParam.showWindow= true;
+% net.trainParam.showCommandLine= false;
+% net.trainParam.show = NaN;
+% net.trainParam.min_grad=  1e-999;         %minimum gradance     
+%  
+% net.trainParam.max_fail=1000;
+% net.trainParam.goal=  1e-30 ;         %Minimum Performance Value
+% net.trainParam.epochs= 500  ;       %Maximum Number of Training Epochs (Iterations)
+% net.trainParam.time=  10*60;          %Maximum Training Time
+% net.trainParam.mem_reduc=2;  
+% % [net,tr] = trainlm( net,DATA(j1,1:14)',DATA(j1,15:20)'  );
+
+% 
+% NetBlock{ii,1}=net;
+% TRBlock{ii,1}=tr;
+ 
+ressst=NetBlock{5} (DATA(jj1,1:14)');
+
+error=(DATA(jj1,15)'-round (ressst));
+accurcy(ii)=length (find (error==0))/length (error) *100
+MSE(ii)= mean(error.^2);
+MAE(ii)=mean(abs(error));           
+RMSE(ii)=sqrt(MSE(ii));
+end
+accurcy=accurcy';
+MSE=MSE';
+MAE=MAE';
+RMSE=RMSE';
