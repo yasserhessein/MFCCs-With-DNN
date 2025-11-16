@@ -1,6 +1,25 @@
-# MFCCs-With-DNN
+# 🎤 Robust Speaker Recognition with Scalable Deep Learning Models and MFCC Features
 
+<div align="center">
 
-More precisely, speech conveys not only linguistic content but also a wealth of information unique to the speaker, influenced by the distinct structure of their vocal tract. Although numerous algorithms have been designed to extract such speaker-specific data for identification, isolating these characteristics from complex audio signals remains a challenge for machines. Traditional approaches have relied on discriminative models to interpret voice data, but as computational power grows, generative models are gaining popularity. Now, with better computing power, generative models are becoming more common. However, even though they work with different types of speech, it’s still unclear if these models can scale up effectively
+[![Python 3.10](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![TensorFlow 2.12](https://img.shields.io/badge/TensorFlow-2.12-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![License](https://img.shields.io/badge/License-MIT-4DA51F?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
+[![DOI](https://img.shields.io/badge/DOI-10.xxxx/xxxxx-1A6FDF?style=for-the-badge&logo=doi&logoColor=white)](https://doi.org/)
 
-![image](https://github.com/user-attachments/assets/2851214b-4dce-4fa9-bae4-267217faedc2)
+</div>
+
+<div align="center">
+  
+  ```mermaid
+  graph TD
+      A[Raw Audio] --> B[Preprocessing]
+      B --> C[MFCC Feature Extraction]
+      C --> D[Deep Learning Models]
+      D --> E[FFNN 🏗️]
+      D --> F[FCBP 🔄]
+      D --> G[EPNN 🧠]
+      E --> H[Performance Evaluation]
+      F --> H
+      G --> H
+      H --> I[Robust Speaker Recognition]
