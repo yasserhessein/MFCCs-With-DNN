@@ -5,6 +5,8 @@ This repository contains the implementation for a robust speaker recognition sys
 <img width="976" height="1114" alt="image" src="https://github.com/user-attachments/assets/4e3799bd-1bf5-4441-9b9d-adb89b9b41dc" />
 
 
+[![Paper](https://img.shields.io/badge/📄-Published%20Paper-2E86AB?style=for-the-badge)](https://eastpublication.com/index.php/ejcs/article/view/185)
+
 ## Objective
 
 To develop a robust, high-performance speaker recognition system capable of handling real-world acoustic challenges by integrating:
