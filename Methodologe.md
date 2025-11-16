@@ -1,4 +1,4 @@
-# 🎤 Robust Speaker Recognition with Scalable Deep Learning Models and MFCC Features
+#  Enhancing Speaker Recognition Robustness with Scalable Deep Learning Models and MFCC Features
 
 <div align="center">
 
