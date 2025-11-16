@@ -1,4 +1,4 @@
-# Robust Speaker Recognition with Scalable Deep Learning Models and MFCC Features
+# Enhancing Speaker Recognition Robustness with Scalable Deep Learning Models and MFCC Features
 
 This repository contains the implementation for a robust speaker recognition system that integrates **Mel-Frequency Cepstral Coefficients (MFCCs)** with three scalable deep learning architectures: **Feed Forward Neural Network (FFNN)**, **Forward Cascade Back Propagation (FCBP)**, and **Elman Propagation Neural Network (EPNN)**.
 
