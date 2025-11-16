@@ -6,6 +6,7 @@ This repository contains the implementation for a robust speaker recognition sys
 
 
 [![Paper](https://img.shields.io/badge/📄-Published%20Paper-2E86AB?style=for-the-badge)](https://eastpublication.com/index.php/ejcs/article/view/185)
+[![DOI](https://img.shields.io/badge/DOI-10.63496/ejcs.Vol1.Iss5.185-1A6FDF?style=for-the-badge&logo=doi&logoColor=white)](https://doi.org/10.63496/ejcs.Vol1.Iss5.185)
 
 ## Objective
 
